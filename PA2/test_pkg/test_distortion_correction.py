@@ -18,10 +18,10 @@ def ReadData(filename):
     return Ng,Nf,data
 
 # load data
-c_expect,c_measure = test_import_data(test_char)
+c_expect,c_measure = import_calibrate_data(test_char)
 
 # calculate the distortion correction function
-coeff = distor_coef_matrix(data_measure,data_expect,5)
+coeff = distor_coef_matrix(c_expect,c_measure,5)
 
 # dewarp data
 Ng, Nf, data = ReadData('../PA 1-2 Student Data/pa2-debug-'+ test_char +'-empivot.txt')
