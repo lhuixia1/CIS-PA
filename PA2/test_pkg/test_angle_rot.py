@@ -51,6 +51,3 @@ print('the sum of all residual error')
 error_value = np.sum(np.sum(error_residual , axis = 0),axis = 0)
 print(error_value)
 
-
-print('git test')
-print('why nothing???')
